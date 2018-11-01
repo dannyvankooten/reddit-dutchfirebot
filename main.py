@@ -20,7 +20,7 @@ def main():
 
     # create sorted array of weekdraadjes
     weekdraadjes = []
-    for s in subreddit.search("Weekdraadje", time_filter='year'):
+    for s in subreddit.search("Weekdraadje", time_filter='month'):
         if "weekdraadje" in s.title.lower():
             weekdraadjes.append(s)
 
