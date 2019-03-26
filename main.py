@@ -24,7 +24,7 @@ def chain(subreddit, chain_title):
     # create sorted array of draadjes
     draadjes = []
     for s in subreddit.search(chain_title, time_filter='month'):
-        if chain_title in s.title.lower():
+        if s.title.lower().startswith(chain_title):
             draadjes.append(s)
 
     draadjes.sort(key=lambda x: x.created_utc, reverse=True)
